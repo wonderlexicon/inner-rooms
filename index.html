@@ -31,7 +31,7 @@
       <!-- global -->
       <img id="floor" src="img/other/floor.jpg">
       <img id="wall" src="img/other/wall-concrete.jpg">
-      <img id="wall-secret" src="img/other/wall-concrete-secret.jpg">
+      <!-- <img id="wall-secret" src="img/other/wall-concrete-secret.jpg"> -->
       <img id="wall-brick" src="img/other/brick.jpg">
       <img id="room-sign-1" src="img/other/room-sign-1.png">
       <img id="room-sign-2" src="img/other/room-sign-2.png">
@@ -99,11 +99,12 @@
       <a-asset-item id="couch-obj" src="img/theater/couch/model.obj"></a-asset-item>
       <a-asset-item id="couch-mtl" src="img/theater/couch/materials.mtl"></a-asset-item>
 
-      <!-- Secret Room -->
+      <!-- Secret Room
       <a-asset-item id="fox-obj" src="img/secret/fox/model.obj"></a-asset-item>
-      <a-asset-item id="fox-mtl" src="img/secret/fox/materials.mtl"></a-asset-item>
+      <a-asset-item id="fox-mtl" src="img/secret/fox/materials.mtl"></a-asset-item> -->
       <!-- Nicoleta stuff -->
       <video id="weirdnessVid" preload="" loop="true" webkit-playsinline playsinline src="vid/weirdness.mp4"></video>
+      <video id="coachvidVid" preload="" loop="true" webkit-playsinline playsinline src="vid/coachvid.mp4"></video>
     </a-assets>
 
     <!-- User / Camera -->
@@ -123,13 +124,15 @@
     <a-entity position="-1.5 1.5 19.5" rotation="0 0 0">
       <!--left wall -->
       <a-entity rotation= "0 90 0">
-        <a-video position="1 1.5 -4.4" src="#weirdnessVid" weirdness-video-handler height="9" width="11"></a-video>
+        <a-video position="1 1.5 -4.4" src="#weirdnessVid" weirdness-video-handler height="5" width="11"></a-video>
+        <a-entity rotation= "0 45 45"></a-entity>
+        <a-video position="-1 1.5 4.4" src="#coachvidVid" coachvid-video-handler height="3" width="3"></a-video>
       </a-entity>
     </a-entity>
 
     <!-- hallway -->
     <!-- right wall -->
-    <a-image position="-.1 3 3" rotation="0 -90 0" src="#team-dan" height="3" width="3"></a-image>
+    <a-image position="-.1 3 3" rotation="0 -90 0" src="#coachvidVid" coachvid-video-handler height="3" width="3"></a-image>
     <a-image position="-.1 3 12" rotation="0 -90 0" src="#team-arcadio" height="3" width="3"></a-image>
     <a-image position="-.1 3 -9" rotation="0 -90 0" src="#team-judy" height="3" width="3"></a-image>
     <!-- left wall -->
@@ -276,10 +279,10 @@
       <a-plane position="0 6 0" rotation="90 0 0" height="9" width="9" color="black"></a-plane>
     </a-entity>
 
-    <!-- Secret Room (Second Right) -->
+    <!-- Secret Room (Second Right)
     <a-entity position="-22.5 1.5 19.5" rotation="0 0 0">
       <a-entity obj-model="obj: #fox-obj; mtl: #fox-mtl" rotation="0 -110 0"></a-entity>
-    </a-entity>
+    </a-entity> -->
 
 
 

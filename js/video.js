@@ -28,6 +28,21 @@ AFRAME.registerComponent('weirdness-video-handler',{
   }
 });
 
+
+AFRAME.registerComponent('coachvid-video-handler',{
+  init: function () {
+   let el = this.el;
+   let vid = document.querySelector("#coachvidVid");
+   vid.pause();
+   el.addEventListener('mouseenter',function(){
+     console.log ("hearing?");
+      vid.play();
+   });
+   el.addEventListener('mouseleave',function(){
+      vid.pause();
+   });
+  }
+});
 // Workaround for mobile video
 // uses the splash screen button to trigger video play/pause so that the
 // video will auto play when the user enters the theater room
